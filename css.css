@@ -49,16 +49,18 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
   flex-direction: column;
   margin-bottom: 20px;
 }
-.hero-section h3 {
+.hero-section h5 {
   color: #e15615;
+  margin-bottom: 10px;
 }
 .hero-section h1 {
   font-weight: 700;
   font-size: 4rem;
+  margin-bottom: 10px;
 }
 .text-color {
   color: #e15615;
@@ -94,30 +96,48 @@
   font-weight: bold;
 }
 .section-video {
-  width: 550px;
-  border-radius: 20px;
-  background-color: #fafafa;
   display: flex;
   justify-content: space-around;
-  gap: 50px;
-  margin-top: 50px;
-  margin-left: 15px;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 30px;
+  width: 700px;
+   margin: 40px auto; 
+ 
 }
-.border:hover {
-  border: 2px solid #ffffffe6;
-} 
+.section-video a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5d5a5a;
+  
+}
+.section-video img {
+  margin-top: 20px;
+}
+.section-video h5{
+margin-bottom: 10px;
+color: #5d5a5a;
+}
+.section-video h3{
+color: black;
+  }
+
 .image img {
-  padding: auto;
-  margin-left: 260px;
+  display: flex;
+  justify-content: space-around;
+text-align: center;
+margin: 0%;
   height: 500px;
-  width: 900px;
+  width: 70%;
+  align-items: center;
 }
 .heading {
-  align-items: center;
+  text-align: center;
 }
 .heading h3 {
   color: #6b6683;
-  margin-left: 350px;
+  align-items: center;
   margin-top: 80px;
   font-weight: 500;
 }
@@ -159,6 +179,7 @@
   padding: 60px;
   padding-bottom: 60px;
   gap: 80px;
+ 
 }
 .content-left {
   gap: 15px;
@@ -169,15 +190,17 @@
   margin-bottom: 20px;
 }
 
-.content-left h1,h3,h4{
-margin-bottom: 35px;
+.content-left h1,
+h3,
+h4 {
+  margin-bottom: 35px;
 }
 
 .images img {
   height: 507px;
   width: 666px;
 }
-.content-left h1{
+.content-left h1 {
   font-size: 50px;
 }
 .content-left h3 {
@@ -185,8 +208,8 @@ margin-bottom: 35px;
 }
 .content-left a {
   color: #e15615;
-} 
-.content-left h4{
+}
+.content-left h4 {
   color: #6b6683;
   font-weight: 500;
 }
@@ -197,12 +220,14 @@ margin-bottom: 35px;
   padding-bottom: 60px;
   gap: 80px;
 }
-.content-left3 h1,h3,h4{
+.content-left3 h1,
+h3,
+h4 {
   margin-bottom: 35px;
-  }
-  .content-left3 h1{
-    font-size: 50px;
-  }
+}
+.content-left3 h1 {
+  font-size: 50px;
+}
 
 .content-left3 {
   gap: 15px;
@@ -217,14 +242,13 @@ margin-bottom: 35px;
 .content-left3 h3 {
   color: #e15615;
 }
-.hero-section2 h4 h1 h5{
-display: flex;
-flex-direction: column;
-margin-top: 20px;
+.hero-section2 h4 h1 h5 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
   margin-bottom: 20px;
-
-} 
-.content-left3 h4{
+}
+.content-left3 h4 {
   color: #6b6683;
   font-weight: 500;
 }
@@ -235,12 +259,14 @@ margin-top: 20px;
   padding-bottom: 60px;
   gap: 80px;
 }
-.content-left4 h1,h3,h4{
+.content-left4 h1,
+h3,
+h4 {
   margin-bottom: 35px;
-  }
-  .content-left4 h1{
-    font-size: 50px;
-  }
+}
+.content-left4 h1 {
+  font-size: 50px;
+}
 
 .content-left4 {
   gap: 15px;
@@ -255,7 +281,7 @@ margin-top: 20px;
 .content-left4 h3 {
   color: #e15615;
 }
-.content-left4 h4{
+.content-left4 h4 {
   color: #6b6683;
   font-weight: 500;
 }
@@ -271,12 +297,14 @@ margin-top: 20px;
   flex-direction: column;
   gap: 15px;
 }
-.content-left5 h1,h3,h4{
+.content-left5 h1,
+h3,
+h4 {
   margin-bottom: 35px;
-  }
-  .content-left5 h1{
-    font-size: 50px;
-  }
+}
+.content-left5 h1 {
+  font-size: 50px;
+}
 
 .images5 img {
   height: 507px;
@@ -285,7 +313,7 @@ margin-top: 20px;
 .content-left5 h3 {
   color: #e15615;
 }
-.content-left5 h4{
+.content-left5 h4 {
   color: #6b6683;
   font-weight: 500;
 }
@@ -309,16 +337,18 @@ margin-top: 20px;
 .content-left6 h3 {
   color: #e15615;
 }
-.content-left6 h4{
+.content-left6 h4 {
   color: #6b6683;
   font-weight: 500;
 }
-.content-left6 h1,h3,h4{
+.content-left6 h1,
+h3,
+h4 {
   margin-bottom: 35px;
-  }
-  .content-left6 h1{
-    font-size: 30px;
-  }
+}
+.content-left6 h1 {
+  font-size: 30px;
+}
 
 .button3 {
   background-color: #e15615;
@@ -331,15 +361,14 @@ margin-top: 20px;
   border: none;
   font-weight: bold;
 }
-  /* SECOND HERO-SECOTION END */
+/* SECOND HERO-SECOTION END */
 /* footer-panel */
 .foot-content {
   align-items: center;
   display: flex;
   flex-direction: column;
- 
-  text-align: center;
 
+  text-align: center;
 }
 .foot-panel h3 {
   color: #e15615;
@@ -347,42 +376,39 @@ margin-top: 20px;
 .foot-panel h1 {
   font-size: 42px;
 }
-.foot-panel h4{
+.foot-panel h4 {
   color: #6b6683;
   font-weight: 500;
 }
-
 
 /* box1 */
 .box1 {
   justify-content: space-between;
   display: flex;
   gap: 20px;
- 
-
 }
 .box1 img {
   height: 31px;
   width: 31px;
-  margin: 15px 10px ;
+  margin: 15px 10px;
   margin-bottom: 30px;
   background-color: #ffffff;
 }
-.right-image{
-height:234px ;
-width: 641px;
-background-color: #fafafa;
-}
-.left-image{
-  height:234px ;
+.right-image {
+  height: 234px;
   width: 641px;
   background-color: #fafafa;
 }
-.left-image h5{
+.left-image {
+  height: 234px;
+  width: 641px;
+  background-color: #fafafa;
+}
+.left-image h5 {
   color: #6b6683;
   font-weight: 500;
 }
-.right-image h5{
+.right-image h5 {
   color: #6b6683;
   font-weight: 500;
 }
@@ -392,39 +418,36 @@ background-color: #fafafa;
   display: flex;
   justify-content: space-around;
   gap: 30px;
- padding-top: 20px;
-
+  padding-top: 20px;
 }
 .box2 img {
   height: 35px;
   width: 35px;
-  margin: 15px 10px ;
+  margin: 15px 10px;
   margin-bottom: 30px;
   background-color: #ffffff;
 }
-.right-images{
-  height:234px ;
+.right-images {
+  height: 234px;
   width: 641px;
   background-color: #fafafa;
-
-  }
-  .left-images{
-    height:234px ;
-    width: 641px;
-    background-color: #fafafa;
-  }
-  .left-images h5{
-    color: #6b6683;
-    font-weight: 500;
-  }
-  .right-images h5{
-    color: #6b6683;
-    font-weight: 500;
-  }
-  .right-images h5 h2{
-    padding-bottom: 10px;
-  }
-
+}
+.left-images {
+  height: 234px;
+  width: 641px;
+  background-color: #fafafa;
+}
+.left-images h5 {
+  color: #6b6683;
+  font-weight: 500;
+}
+.right-images h5 {
+  color: #6b6683;
+  font-weight: 500;
+}
+.right-images h5, h2 {
+  margin-bottom: 40px;
+}
 
 /* main footer section */
 .footer {
@@ -447,14 +470,14 @@ background-color: #fafafa;
   justify-content: space-evenly;
   flex-direction: column;
 }
-.footer-section h4{
+.footer-section h4 {
   color: #6b6683;
   font-weight: 500;
 }
 .button4 {
   background-color: #e15615;
   color: white;
-  
+
   border-radius: 20px;
   justify-content: center;
   align-items: center;
