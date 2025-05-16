@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.prod.website-files.com/67b6008a59373c74002ce4ed/67bdf5fb030b4e6958c5aab2_appsmith-ai.png" rel="shortcut icon" type="image/x-icon">
+    <title>Landing_page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* nav section */
+        .navbaar {
+            height: auto;
+            padding: 15px 20px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            border: 0;
+            background-color: #fafafa;
+            font-size: 16px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-logo img {
+            max-width: 140px;
+        }
+
+        .navbaar ul {
+            display: none;
+            list-style: none;
+        }
+
+        .navbaar button {
+            background-color: #e15615;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            padding: 10px 15px;
+            border: none;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: block;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* hero-section */
+        .hero-section {
+            width: 100%;
+            padding: 120px 20px 60px;
+            background-image: linear-gradient(45deg, pink, lightblue);
+            display: flex;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-section h5 {
+            color: #e15615;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .text-color {
+            color: #e15615;
+        }
+
+        .hero-section h4 {
+            color: #6b6683;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 16px;
+            max-width: 800px;
+        }
+
+        .button {
+            display: flex;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button1, .button2 {
+            border-radius: 25px;
+            padding: 12px 20px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button1 {
+            background-color: #e15615;
+            color: white;
+        }
+
+        .button2 {
+            background-color: transparent;
+            border: 1px solid #6b6683;
+            color: #6b6683;
+        }
+
+        .button1:hover, .button2:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-video {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            background: #f8f8f8;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .section-video a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #5d5a5a;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .section-video img {
+            margin-bottom: 10px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .section-video h5 {
+            margin-bottom: 5px;
+            color: #5d5a5a;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .section-video h3 {
+            color: black;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .heading h3 {
+            color: #6b6683;
+            margin-top: 50px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .icon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .icon img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        /* features-section */
+        .feature-section {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .feature-section h4 {
+            color: #e15615;
+            font-size: 14px;
+        }
+
+        .feature-section h1 {
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .feature-section h5 {
+            color: #6b6683;
+            margin-top: 10px;
+            font-size: 16px;
+            max-width: 800px;
+        }
+
+        /* hero sections */
+        .hero-section2, .hero-section3, 
+        .hero-section4, .hero-section5, 
+        .hero-section6 {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        .content-left, .content-left3, 
+        .content-left4, .content-left5, 
+        .content-left6 {
+            gap: 15px;
+            text-align: left;
+        }
+
+        .content-left h1, .content-left3 h1, 
+        .content-left4 h1, .content-left5 h1, 
+        .content-left6 h1,
+        .content-left h3, .content-left3 h3, 
+        .content-left4 h3, .content-left5 h3, 
+        .content-left6 h3,
+        .content-left h4, .content-left3 h4, 
+        .content-left4 h4, .content-left5 h4, 
+        .content-left6 h4 {
+            margin-bottom: 20px;
+        }
+
+        .content-left h1, .content-left3 h1, 
+        .content-left4 h1, .content-left5 h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .content-left6 h1 {
+            font-size: 1.8rem;
+        }
+
+        .images img, .images3 img, 
+        .images4 img, .images5 img, 
+        .images6 img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .content-left h3, .content-left3 h3, 
+        .content-left4 h3, .content-left5 h3, 
+        .content-left6 h3 {
+            color: #e15615;
+            font-size: 16px;
+        }
+
+        .content-left h4, .content-left3 h4, 
+        .content-left4 h4, .content-left5 h4, 
+        .content-left6 h4 {
+            color: #6b6683;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .button3 {
+            background-color: #e15615;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            padding: 12px 20px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button3:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* footer-panel */
+        .foot-panel {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .foot-panel h3 {
+            color: #e15615;
+            font-size: 14px;
+        }
+
+        .foot-panel h1 {
+            font-size: 2rem;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .foot-panel h4 {
+            color: #6b6683;
+            font-weight: 500;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* boxes */
+        .box1, .box2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .left-image, .right-image, 
+        .left-images, .right-images {
+            background-color: #fafafa;
+            padding: 30px 20px;
+            border-radius: 15px;
+        }
+
+        .left-image img, .right-image img, 
+        .left-images img, .right-images img {
+            height: 35px;
+            width: 35px;
+            margin-bottom: 15px;
+        }
+
+        .left-image h2, .right-image h2, 
+        .left-images h2, .right-images h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .left-image h5, .right-image h5, 
+        .left-images h5, .right-images h5 {
+            color: #6b6683;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* main footer section */
+        .footer {
+            padding: 30px 20px;
+        }
+
+        .footer-section {
+            border-radius: 20px;
+            background-image: linear-gradient(
+                -277deg,
+                #fcf4df99,
+                #efb7ea99 55.61%,
+                #b79bf599
+            );
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-section h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .footer-section h4 {
+            color: #6b6683;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .button4, .button5 {
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button4 {
+            background-color: #e15615;
+            color: white;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .button5 {
+            background-color: transparent;
+            border: 1px solid #6b6683;
+            color: #6b6683;
+        }
+
+        .button4:hover, .button5:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .borderline {
+            padding: 20px;
+            border-top: 1px solid #6b6683;
+            text-align: center;
+            color: #6b6683;
+            font-size: 14px;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .navbaar ul {
+                display: flex;
+                gap: 20px;
+            }
+
+            .navbaar {
+                padding: 20px 40px;
+                font-size: 18px;
+            }
+
+            .nav-logo img {
+                max-width: 171px;
+            }
+
+            .navbaar button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+
+            .hero-section {
+                padding: 150px 20px 80px;
+            }
+
+            .hero-section h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-video {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 20px;
+            }
+
+            .hero-section2, .hero-section3, 
+            .hero-section4, .hero-section5, 
+            .hero-section6 {
+                flex-direction: row;
+                padding: 60px 40px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .hero-section3, .hero-section5 {
+                flex-direction: row-reverse;
+            }
+
+            .content-left, .content-left3, 
+            .content-left4, .content-left5, 
+            .content-left6 {
+                flex: 1;
+            }
+
+            .images, .images3, 
+            .images4, .images5, 
+            .images6 {
+                flex: 1;
+            }
+
+            .content-left h1, .content-left3 h1, 
+            .content-left4 h1, .content-left5 h1 {
+                font-size: 2.5rem;
+            }
+
+            .box1, .box2 {
+                flex-direction: row;
+                padding: 40px;
+            }
+
+            .left-image, .right-image, 
+            .left-images, .right-images {
+                flex: 1;
+                padding: 40px;
+            }
+
+            .footer {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .footer-section {
+                padding: 60px 40px;
+            }
+
+            .footer-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-section h1 {
+                font-size: 4rem;
+            }
+
+            .feature-section h1 {
+                font-size: 3rem;
+            }
+
+            .content-left h1, .content-left3 h1, 
+            .content-left4 h1, .content-left5 h1 {
+                font-size: 3rem;
+            }
+
+            .footer-section h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbaar start -->
+    <header>
+        <div class="navbaar">
+            <div class="nav-logo border">
+                <img src="Logo.svg" alt="appsmiht">
+            </div>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Integration</a></li>
+                <li><a>Princing</a></li>
+                <li><a>Docs</a></li>
+                <li><a>Blog</a></li>
+            </ul>
+            <button>Get started
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- navbaar end -->
+    <!-- hero-section -->
+    <div class="hero-section">
+        <h5>ENTERPTINSE AI WITH CONTINUOUS CONTEXT</h5>
+        <h1>Bring AI agent<span class="text-color"> to work</span></h1>
+        <h4>Scale your support, sales, success, and people teams with secure, embedded agents powered by your data.
+        </h4>
+        <div class="button">
+            <button class="button1"><a>Get Started</a> <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="button2"><a>Watch video</a> <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="section-video">
+            <a> <img src="icon1.png" height="30px" width="30px"><h3>Embed</h3>
+                <h5>Agents in any application</h5></a>
+            <a> <img src="icon2.png" height="30px" width="30px"><h3>Integrate</h3>
+                <h5>Data across your company</h5></a>
+            <a> <img src="icon3.png" height="30px" width="30px"><h3>Automate</h3>
+                <h5>App and human actions</h5></a>
+            <a> <img src="icon4.png" height="30px" width="30px"><h3>Monitor</h3>
+                <h5>Accuracy and security</h5></a>
+        </div>
+    </div>
+    <div class="image">
+        <img src="img1.webp">
+    </div>
+    <div class="heading">
+        <h3>Leading enterprises around the world build custom applications with Appsmith</h3>
+    </div>
+    <div class="icon">
+        <img src="dropbox-logo.png" alt="#">
+        <img src="Logo.svg" alt="#">
+        <img src="Twilio-logo-red.png" alt="#">
+        <img src="block-logo.png" alt="#">
+        <img src="Zuora.svg" alt="#">
+    </div>
+    <div class="feature-section">
+        <h4>FEATURES</h4>
+        <div>
+            <h1>Improve team performance and customer satisfaction</h1>
+            <h5>Build, deploy, and manage AI agents that automate business processes and provide assistance to your
+                customers and employees — no AI engineers required.</h5>
+        </div>
+    </div>
+    <!-- second hero-sectoin  -->
+    <div class="hero-section2">
+        <div class="content-left">
+            <h3>CHROME EXTETIONS</h3>
+            <h1>Access agents anywhere</h1>
+            <h4>Embed AI directly into your team's tools—either natively or via our <a href="#">Chrome
+                    extension</a>.
+                Use shared SSO
+                logins for a seamless experience with enforced access controls</h4>
+        </div>
+        <div class="images">
+            <img src="image4.png" alt="#">
+        </div>
+    </div>
+    <div class="hero-section3">
+        <div class="images3">
+            <img src="image5.png">
+        </div>
+        <div class="content-left3">
+            <h3>1-click Rag</h3>
+            <h1>Provide context from your data</h1>
+            <H4>Securely connect agents to your internal documentation, databases, and applications for highly
+                accurate
+                answers</H4>
+        </div>
+    </div>
+    <div class="hero-section4">
+        <div class="content-left4">
+            <h3>Chat interface builder</h3>
+            <h1>Create rich chat interactions with evidence</h1>
+            <h4>Add conversations to any application with a flexible, responsive chat interface. Verify
+                responses
+                with automatic citations pulled directly from your data.</h4>
+        </div>
+        <div class="images4">
+            <img src="image6.webp" alt="#">
+        </div>
+    </div>
+    <div class="hero-section5">
+        <div class="images5">
+            <img src="image7.png">
+        </div>
+        <div class="content-left5">
+            <h3>Function Calls</h3>
+            <h1>Trigger automated and human actions</h1>
+            <h4>Create interactive workflows for approvals, reviews, and other actions based on AI suggestions.
+                Design custom UI components that agents can call to present data, and complete tasks.</h4>
+        </div>
+    </div>
+    <div class="hero-section6">
+        <div class="content-left6">
+            <h3>case study</h3>
+            <h1>Funding Societies builds an AI agent to handle frontline customer inquiries</h1>
+            <h4>Able to process up to 50% of typical support rep's workload, the full-stack AI application
+                automates customer support — reducing inquiry turnaround times, and improving satisfaction rates.
+            </h4>
+            <button class="button3">Read more
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="images6">
+            <img src="image8.png">
+        </div>
+    </div>
+
+    <!-- footer-section -->
+    <div class="foot-panel">
+        <div class="foot-content">
+            <h3> ENTETPRISE-GRADE SECURITY</h3>
+            <h1>Deploy securely and protect sensitive data</h1>
+            <h4>Appsmith is built for enterprise AI deployments with robust user, data, and security controls
+            </h4>
+        </div>
+    </div>
+    <!-- box section -->
+    <div class="box1">
+        <div class="left-image">
+            <img src="cloud-icon.png" alt="">
+            <h2>Self-host in AWS, Azure, or GCP</h2>
+            <h5>Deploy Appsmith as a Docker or Kubernetes container in your VPC or cloud provider, or take advantage
+                of our secure managed hosting. Monitor performance with detailed audit logs and tracking dashboards.
+            </h5>
+        </div>
+        <div class="right-image">
+            <img src="data-icon.png" alt="">
+            <h2>Keep your data in-house</h2>
+            <h5>Self-hosted deployments means that none of your proprietary data needs to be exposed externally. All
+                contextual data used for Appsmith Agents remains with your Appsmith instance.</h5>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="left-images">
+            <img src="users-icon.png" alt="">
+            <h2>Bring your users, logins, and access controls</h2>
+            <h5>Appsmith integrates with your SCIM system and SSO provider for access management. Users can be
+                separated into logical workspaces with granular roles, access controls and permissions</h5>
+        </div>
+        <div class="right-images">
+            <img src="llm-icon.png" alt="">
+            <h2>Use your preferred LLM</h2>
+            <h5>Appsmith can work with any LLM. Use OpenAI, Anthropic, Gemini, or connect directly to your preferred
+                provider. You have full control over API keys and model configurations.</h5>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h1>Unlock productivity with contextual AI agents</h1>
+            <h4>Try Appsmith Agents for free. No strings attached.</h4>
+            <div class="button">
+                <button class="button4"><a>Get Started</a> <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="button5"><a>Content Us</a> <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="borderline">
+        Privacy Terms
+        © 2025 Appsmith, Inc. All rights reserved
+    </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navList = document.querySelector('.navbaar ul');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.position = 'absolute';
+                navList.style.top = '90px';
+                navList.style.right = '20px';
+                navList.style.backgroundColor = '#fafafa';
+                navList.style.padding = '20px';
+                navList.style.borderRadius = '10px';
+                navList.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                navList.style.gap = '15px';
+            }
+        });
+
+
+        // Resize event to handle menu display on larger screens
+        window.addEventListener('resize', function() {
+            const navList = document.querySelector('.navbaar ul');
+            if (window.innerWidth >= 768) {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'row';
+                navList.style.position = 'static';
+                navList.style.backgroundColor = 'transparent';
+                navList.style.padding = '0';
+                navList.style.boxShadow = 'none';
+            } else {
+                navList.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
