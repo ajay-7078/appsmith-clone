@@ -1,15 +1,14 @@
 /* mobile phone  */
 @media screen and (max-width: 768px) {
   /* navbaar setion */
-  .navbaar ul,
-  i {
+  .navbaar ul,i {
     display: none;
     gap: 20px;
   }
   .navbaar {
-    width: 100%;
+    min-width: 100vw;
     flex-wrap: wrap;
-display: flex;
+    display: flex;
   }
   .nav-logo img {
     max-width: 171px;
@@ -33,9 +32,9 @@ display: flex;
     font-size: 16px;
   }
   .image img {
-     height: auto;
-  width:70%;
-  border-radius: 10px;
+    height: auto;
+    width: 70%;
+    border-radius: 10px;
   }
   .icon img {
     height: 24px;
@@ -50,26 +49,47 @@ display: flex;
     flex-wrap: wrap;
   }
   /* hero section  */
-  .content-left{
+  .content-left {
     align-items: center;
   }
   .hero-section2 {
     flex-direction: column;
   }
+    .hero-section2 img {
+   max-width:100%;
+   height: auto;
+
+  }
   .hero-section3 {
     flex-direction: column-reverse;
+  }
+     .hero-section3 img {
+   max-width:100%;
+   height: auto;
+
   }
   .hero-section4 {
     flex-direction: column;
   }
+     .hero-section4 img {
+   max-width:100%;
+   height: auto;
+
+  }
   .hero-section5 {
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
+  }
+     .hero-section5 img {
+   max-width:100%;
+   height: auto;
+
   }
   .hero-section6 {
     flex-direction: column;
   }
-  .hero-section6 img{
-    height: 50vh;
-    width: 40vh;
+  .hero-section6 img {
+   max-width:100%;
+   height: auto;
+
   }
 }
