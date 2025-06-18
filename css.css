@@ -105,6 +105,7 @@
   max-width: 700px;
   margin: 30px auto;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .section-video a {
   display: flex;
@@ -174,9 +175,9 @@
   flex-direction: column;
   gap: 40px;
 }
-.feature-section h4 {
-  color: #e15615;
-  font-size: 14px;
+.feature-section h4{
+color: #e15615;
+  font-size: 18px;
 }
 .feature-section h1 {
   font-weight: bold;
@@ -200,7 +201,9 @@
   gap: 15px;
   text-align: left;
 }
-
+.content-left h3,a{
+  color: #e15615;
+}
 .content-left h1,
 h3,
 h4 {
@@ -216,7 +219,7 @@ h4 {
   font-size: 1.8rem;
 }
 .content-left h3 {
-  color: #7815e181;
+  color: #e15615;
   font-size: 16px;
 }
 .content-left a {

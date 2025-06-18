@@ -1,4 +1,4 @@
-/* mobile phone  */
+/* tablet phone  */
 @media screen and (max-width: 768px) {
   /* navbaar setion */
   .navbaar ul,i {
@@ -11,11 +11,10 @@
     display: flex;
   }
   .nav-logo img {
-    max-width: 171px;
+    max-width: 170px;
   }
   .navbaar button {
-    font-size: 16px;
-    padding: 12px 20px;
+
   }
 
   /* hero section */
@@ -91,5 +90,113 @@
    max-width:100%;
    height: auto;
 
+  }
+}
+
+
+/* mobile responsive */
+
+
+@media (max-width:420px){
+
+
+  /* navbaar section */
+  .navbaar{
+    padding: 10px 20px;
+    position: fixed;
+  }
+  .nav-logo img{
+   width: 100px;      
+  max-width: 100%;    
+height: auto;
+padding-top:10px ;
+  }
+  .navbaar button{
+    width: 100px;
+    max-width: 100%;
+    
+    height: auto;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .hero-section {
+   
+  }
+  .button1,.button2,.button3{
+    width: 100px;
+    max-width: 100%;
+   
+    height: auto;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .section-video{
+    margin: 20px 50px;
+  }
+  .section-video img {
+    max-width: 100%;
+    height: auto;
+  }
+  .image img{
+    width:100% ;
+    height: auto;
+  }
+  .icon{
+
+  }
+  .feature-section{
+    gap: 20px;
+    padding: 0% 10px;
+  }
+  .feature-section h1{
+    font-size: 24px ;
+  }
+  .content-left h1{
+    font-size: 24px;
+  }
+  .content-left h3,h4{
+    font-size: 20px;
+  }
+  .hero-section2 h1{
+    font-size: 24px;
+  }
+  .hero-section2 h3,h4{
+    font-size: 20px;
+  }
+   .hero-section3 h1{
+    font-size: 24px;
+  }
+  .hero-section3 h3,h4{
+    font-size: 20px;
+  }
+    .hero-section4 h1{
+    font-size: 24px;
+  }
+  .hero-section4 h3,h4{
+    font-size: 20px;
+  }
+    .hero-section5 h1{
+    font-size: 24px;
+  }
+  .hero-section5 h3,h4{
+    font-size: 20px;
+  }
+    .hero-section6 h1{
+    font-size: 24px;
+  }
+  .hero-section6 h3,h4{
+    font-size: 20px;
+  }
+  .foot-content ,h1{
+ font-size: 24px;
+  }
+  .foot-content h3{
+    font-size: 16px;
+  }
+  .box1,.box2 h2{
+font-size: 18px;
+  }
+  .footer-section h1{
+font-size: 24px;
   }
 }
